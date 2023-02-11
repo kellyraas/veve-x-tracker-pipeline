@@ -1,0 +1,5 @@
+exclusions:
+  - '0x7be178ba43a9828c22997a3ec3640497d88d2fd3' # Veve wallet
+  - '0x1400d3c5918187e0f1ac663c17c48acf0c6b12fc' # Burn wallet
+  - '0x894304eedaae9303584ccfdc15b8d2b270b27af8' # Licensor wallet
+  - '0x39e3816a8c549ec22cd1a34a8cf7034b3941d8b1' # Burn wallet

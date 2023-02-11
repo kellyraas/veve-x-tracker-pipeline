@@ -1,0 +1,13 @@
+db:
+  main:
+    host: MAIN_HOST
+    user: MAIN_USER
+    password: MAIN_PASSWORD
+    database: MAIN_DB
+    client: mysql+pymysql
+    connect_args: 
+      ssl_ca: /etc/ssl/cert.pem
+  sqlite:
+    client: sqlite
+    database: /Users/kelly/Projects/veve-x-tracker-etl/veve_imx_db.db
+    connect_args: {}
