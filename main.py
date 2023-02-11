@@ -166,17 +166,17 @@ def run_pipeline():
     # Initiate DB Connection
     db = init_db_connection()
 
-    # Update Daily Transfers, Mints and Active Wallets
+    # Get Daily Transfers, Mints and Active Wallets Data
     df_transfers = get_transfers_data(db)
     df_mints = get_mints_data(db)
     df_active_wallets = get_active_wallets_date(db)
 
-    # Update Drop Metadata
+    # Get Drop Metadata
     collectibles_data = get_collectibles_metadata()
     comics_data = get_comics_metadata()
     df_drops = create_drop_metadata_file(collectibles_data, comics_data)
 
-    # Update Leaderboard Data
+    # Get Leaderboard (aka Top 100) Data
     wallets = get_top_wallets(db, 100)
     wallet_activity = get_wallet_activity(db, wallets, 61)
     df_leaderboard = create_leaderboard(wallets, wallet_activity)
