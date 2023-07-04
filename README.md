@@ -2,7 +2,7 @@
 The [Veve X Tracker](https://cutt.ly/vevextracker) is a dashboard built with Google Data Studio that tracks the transaction data of the VeVe Market. The aim of the Dashboard is to provide a transparent view of the VeVe Market to the Veve community and make the blockchain data accessible and easy to track and analyze. The Dashboard is updated on a daily basis and includes data about: Transfer Volume, Buyer & Sellers, Active wallets, New Active Wallets, Drop Details, Tokens minted as well as a section that tracks the transactions of the top 100 wallets. The data goes back to 01/01/2022.
 
 ## Data Source and Infrastructure
-The dashboard is using blockchain data extracted via the [ImmutableX API](https://docs.x.immutable.com/reference/#/). The raw data is extracted once a day (01:00 UTC) and stored on AWS infrastructure (S3 Buckets). Another ETL running on Lambda estracts the data, transforms it and stores it in different tables in a relational database. 
+The dashboard is using blockchain data extracted via the [ImmutableX API](https://docs.x.immutable.com/reference/#/). The raw data is extracted once a day (01:00 UTC) and stored on AWS infrastructure (S3 Buckets). Another ETL running on Lambda extracts the data, transforms it and stores it in different tables in a relational database. 
 
 ## Veve X Tracker Pipeline
 The [main.py](main.py) file in this repository is the pipeline that populates the data for the VeveXTracker Dashboard. The data is extracted from the relational database aggregated, formatted and then exported to different Google Sheets which are connected to Google Data Studio. The pipeline is currently executed manually, by myself every day (usually before 08:00 CET). 
